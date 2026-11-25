@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-book: "Lora", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --color-sand-canvas: #D4C6B9;
+  --color-sand-soft: #DFD3C8;
+  --color-sand-deep: #C5B6A7;
+  --color-champagne: #C5B18C;
+  --color-gold-ring: #C9AE7E;
+  --color-ivory: #F8F6F2;
+  --color-ink: #11100F;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #D4C6B9;
+    color: #11100F;
+    scroll-behavior: smooth;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-variation-settings: "SOFT" 100, "opsz" 72;
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+.font-book {
+  font-family: var(--font-book);
+}
+
+/* Soft editorial canvas warmth */
+.sand-canvas-bg {
+  background: linear-gradient(180deg, #D3C5B8 0%, #D8CBBF 50%, #D1C2B4 100%);
+}
+
+/* Dreamy pastel peach-lavender coastal sunset overlay on Hero (matching Snowies aesthetic) */
+.hero-sunset-tint {
+  background: linear-gradient(
+    180deg,
+    rgba(229, 179, 189, 0.42) 0%,
+    rgba(241, 198, 182, 0.34) 42%,
+    rgba(195, 174, 198, 0.36) 76%,
+    rgba(212, 198, 185, 0.92) 100%
+  );
+}
+
+/* Realistic matte black iPhone bezel shadow */
+.iphone-shell {
+  background: linear-gradient(145deg, #252424 0%, #0E0E0E 48%, #1C1B1B 100%);
+  box-shadow:
+    0 24px 54px rgba(17, 16, 15, 0.28),
+    0 4px 12px rgba(17, 16, 15, 0.16),
+    inset 0 0 0 1.5px rgba(255, 255, 255, 0.14);
+}
+
+/* Luxury ivory pill CTA button */
+.pill-ivory {
+  background-color: #F7F5F2;
+  color: #11100F;
+  box-shadow: 0 10px 26px rgba(17, 16, 15, 0.14);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.pill-ivory:hover {
+  background-color: #11100F;
+  color: #F7F5F2;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(17, 16, 15, 0.22);
+}
+
+/* Subtle gold shimmer glow behind Contact portrait */
+.gold-shimmer-aura {
+  background: radial-gradient(
+    circle at 38% 36%,
+    rgba(232, 200, 134, 0.72) 0%,
+    rgba(201, 174, 126, 0.35) 36%,
+    rgba(212, 198, 185, 0) 70%
+  );
+}
+
+/* Smooth scrollbar matching warm sand */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #D4C6B9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A99786;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8C7A68;
+}
